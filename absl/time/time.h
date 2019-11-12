@@ -1413,7 +1413,7 @@ constexpr Duration FromInt64(int64_t v, std::ratio<3600>) {
 // valid. That is, if a T can be assigned to an int64_t without narrowing.
 template <typename T>
 constexpr auto IsValidRep64(int)
-    -> decltype(int64_t{std::declval<T>()}, bool()) {
+    -> decltype(int64_t{std::declval<T>()} == 0) {
   return true;
 }
 template <typename T>
