@@ -366,8 +366,6 @@ Pod::Spec.new do |s|
       s2.dependency 'abseil/base/raw_logging_internal'
       s2.dependency 'abseil/debugging/examine_stack'
       s2.dependency 'abseil/debugging/stacktrace'
-      s2.ios.deployment_target = '7.0'
-      s2.osx.deployment_target = '10.9'
     end
     s1.subspec 'leak_check' do |s2|
       s2.source_files = 'absl/debugging/leak_check.cc',
